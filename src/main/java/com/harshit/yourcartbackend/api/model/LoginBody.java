@@ -9,6 +9,7 @@ public class LoginBody {
     @NotBlank
     @Size(min = 3, max = 255)
     private String username;
+
     @NotBlank
     @NotNull
     private String password;

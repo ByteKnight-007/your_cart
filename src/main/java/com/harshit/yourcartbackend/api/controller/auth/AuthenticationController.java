@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/auth")
 public class AuthenticationController {
     private UserService userService;
-
     public AuthenticationController(UserService userService) {
         this.userService = userService;
     }

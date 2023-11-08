@@ -6,7 +6,6 @@ import com.harshit.yourcartbackend.exception.UserAlreadyExistsException;
 import com.harshit.yourcartbackend.model.LocalUser;
 import com.harshit.yourcartbackend.model.dao.LocalUserDAO;
 import org.springframework.stereotype.Service;
-
 import java.util.Optional;
 
 @Service
@@ -28,12 +27,10 @@ public class UserService {
         }
 
         LocalUser user = new LocalUser();
-
         user.setFirstName(registrationBody.getFirstName());
         user.setLastName(registrationBody.getLastName());
         user.setUsername(registrationBody.getUsername());
         user.setEmail(registrationBody.getEmail());
-
         user.setPassword(encryptionService.encryptPassword(registrationBody.getPassword()));
 
         return localUserDAO.save(user);

@@ -1,7 +1,6 @@
 package com.harshit.yourcartbackend.model;
 
 import jakarta.persistence.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,5 +54,4 @@ public class ProductOrder {
     public void setId(Long id) {
         this.id = id;
     }
-
 }

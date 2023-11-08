@@ -1,5 +1,6 @@
 package com.harshit.yourcartbackend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -17,6 +18,7 @@ public class ProductOrderQuantity {
     @Column(name = "quantity", nullable = false)
     private Long quantity;
 
+    @JsonIgnore
     @ManyToOne(optional = false)
     @JoinColumn(name = "order_id", nullable = false)
     private ProductOrder order;
@@ -52,5 +54,4 @@ public class ProductOrderQuantity {
     public void setId(Long id) {
         this.id = id;
     }
-
 }

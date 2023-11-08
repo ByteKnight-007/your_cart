@@ -1,5 +1,6 @@
 package com.harshit.yourcartbackend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -22,6 +23,7 @@ public class Product {
     @Column(name = "price", nullable = false)
     private Double price;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "product", cascade = CascadeType.REMOVE, optional = false, orphanRemoval = true)
     private Inventory inventory;
 
@@ -72,5 +74,4 @@ public class Product {
     public void setId(Long id) {
         this.id = id;
     }
-
 }

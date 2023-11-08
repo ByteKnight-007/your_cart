@@ -14,6 +14,17 @@ public class Inventory {
     @JoinColumn(name = "product_id", nullable = false, unique = true)
     private Product product;
 
+    @Column(name = "quantity", nullable = false)
+    private Long quantity;
+
+    public Long getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Long quantity) {
+        this.quantity = quantity;
+    }
+
     public Product getProduct() {
         return product;
     }
@@ -29,5 +40,4 @@ public class Inventory {
     public void setId(Long id) {
         this.id = id;
     }
-
 }
